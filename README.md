@@ -31,7 +31,6 @@ Usage
 	38.913611 -77.013222
 	None
     None
-    None
 
 Data
 ------
