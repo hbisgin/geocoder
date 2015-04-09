@@ -1,8 +1,9 @@
+from __future__ import print_function
 import sys
 from geocoder import Geocoder
 
 if len(sys.argv) < 4:
-    print "[USAGE]: python %s [state abbr filepath] [city filepath] [location text filepath]" % sys.argv[0]
+    print ("[USAGE]: python",sys.argv[0],"[state abbr filepath] [city filepath] [location text filepath]")
     exit()
 
 state_abbr_filepath = sys.argv[1]
@@ -15,6 +16,6 @@ for line in open(location_text_filepath, 'r'):
     location_text = line.rstrip()
     point = gc.geocode(location_text)
     if point == None:
-        print None
+        print (None)
     else:
-        print point[0], point[1]
+        print (point[0], point[1])

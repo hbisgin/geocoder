@@ -1,10 +1,12 @@
-Twitter Location Profile Geocoder
+Location Geocoder
 ======================
-Geoconding Twitter users' location profiles into coordinates.  
+Reads in "cityName,stateName" or "cityName,stateAbbreviation" pairs and outputs (latitude,longitude) pairs.  
 
-This geocoder can geocode in the form of "stateName,cityName" or "stateAbbreviation,cityName".  
+This geocoder has been used in geocoding Twitter users' location profiles into coordinates (e.g. [this IPYNB](http://nbviewer.ipython.org/github/oztalha/GeoInfluence/blob/master/analysis/Locations.ipynb) creates a map of followers of Governor of ND).
 
 This geocoding method is adopted in the research papers [1] [2].
+
+Note: Works both in Python 2 and 3.
 
 Usage
 ------
@@ -15,7 +17,8 @@ Usage
     Boston, MA
     Boston ,MA
     Boston , MA
-    Houston, MA
+	  Washington , D.C.
+	Houston, MA
     In your heart
 
 ### Geocode prepared input data ###
@@ -25,6 +28,8 @@ Usage
     42.321597 -71.089115
     42.321597 -71.089115
     42.321597 -71.089115
+	38.913611 -77.013222
+	None
     None
     None
 
